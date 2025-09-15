@@ -1,0 +1,65 @@
+/*
+Nombre: Sebastián A. Cardona Ralat
+Núm. Est: 801-24-0466
+*/
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+
+srand(time(0));
+
+// Los tres números aleatorios desplegados serán entre 0 y 100
+int max = 100;
+int min = 0;
+
+int numAleatorio1 = rand() % (max - min + 1) + min;
+int numAleatorio2 = rand() % (max - min + 1) + min;
+int numAleatorio3 = rand() % (max - min + 1) + min;
+
+char numGenerado1, numGenerado2, numGenerado3;
+
+// Desplegar los tres números aleatorios 
+std::cout << "Números aleatorios generados: " << numAleatorio1 << " " << numAleatorio2 << " " << numAleatorio3;
+std::cin >> numGenerado1, numGenerado2, numGenerado3;
+
+    int numDespl1 = static_cast<int>(numGenerado1) - '0';
+    int numDespl2 = static_cast<int>(numGenerado2) - '0';
+    int numDespl3 = static_cast<int>(numGenerado3) - '0';
+    
+
+// Desplegar los tres números aleatorios en orden descendiente 
+if (numDespl1 >= numDespl2 && numDespl1 >= numDespl3 && numDespl2 >= numDespl3) {
+    std::cout << "Orden descendiente: " << numDespl1 << ">=" << numDespl2  << ">=" << numDespl3 << std::endl;
+
+}
+
+else if (numDespl1 >= numDespl2 && numDespl1 >= numDespl3 && numDespl3 >= numDespl2) {
+    std::cout << "Orden descendiente: " << numDespl1 << ">=" << numDespl3 << ">=" << numDespl2 << std::endl;
+
+}
+
+else if (numDespl2 >= numDespl1 && numDespl2 >= numDespl3 && numDespl1 >= numDespl3) {
+    std::cout << "Orden descendiente: " << numDespl2 << ">=" << numDespl1 << ">=" << numDespl3 << std::endl;
+
+}
+
+else if (numDespl2 >= numDespl1 && numDespl2 >= numDespl3 && numDespl3 >= numDespl1) {
+    std::cout << "Orden descendiente: " << numDespl2 << ">=" << numDespl3 << ">=" << numDespl1 << std::endl;
+
+}
+
+else if (numDespl3 >= numDespl1 && numDespl3 >= numDespl2 && numDespl2 >= numDespl1) {
+    std::cout << "Orden descendiente: " << numDespl3 << ">=" << numDespl2 << ">=" << numDespl1 << std::endl;
+
+}
+
+else (numDespl3 >= numDespl1 && numDespl3 >= numDespl2 && numDespl1 >= numDespl2); {
+    std::cout << "Orden descendiente: " << numDespl3 << ">=" << numDespl1 << ">=" << numDespl2 << std::endl;
+
+}
+
+
+}
